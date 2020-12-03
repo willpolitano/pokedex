@@ -3,7 +3,7 @@
     <div class="column is-half is-offset-one-quarter">
       <input class="input is-rounded" type="text" v-model="busca">
       <button id="busca" class="button is-danger is-outlined is-fullwidth" @click="buscar">Buscar</button>
-      <div v-for="(pokemon,index) in filteredPokemons" :key="index">
+      <div v-for="(pokemon,index) in filteredPokemons" :key="pokemon.url">
         <Pokemon :name="pokemon.name" :url="pokemon" :num="index+1"/>
       </div>
     </div>
